@@ -1,0 +1,174 @@
+%This template is based on one provided by the American Physical Society for submission to its journals.
+%O modelo original pertence a Jamie Clark e pode ser encontrado em https://www.overleaf.com/articles/measurement-of-the-dynamic-viscosity-of-canola-oil-using-a-ball-drop/xqzcwdpgbxkc
+
+\documentclass[aps,twocolumn,preprintnumbers]{revtex4}
+
+%Os pacotes abaixo adicionam comandos LaTeX que facilitam a escrita e formatação. Caso tenha alguma dúvida sobre a funcionalidade, pesquise o nome do pacote no link: https://www.overleaf.com/learn/latex/Understanding_packages_and_class_files
+
+\usepackage{graphicx}  % Inclui arquivos de figuras
+\usepackage{subfigure}
+\usepackage{multirow}
+
+\linespread{1.1}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{parskip}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{dcolumn}   
+\usepackage{bm}        
+\usepackage{amsfonts}  % Fontes de matemática
+\usepackage{amsmath}   % Funções matemáticas
+\usepackage{amssymb}   % Símbolos matemáticos
+
+
+\setlength{\parindent}{10pt}
+
+\begin{document}
+
+\title{Título do Relatório}
+
+\author{Fulano A, Beltrano B e Sicrano C.}
+
+\affiliation {Instituto de Física, Universidade Federal de Alagoas, 57072-970 Maceió-AL, Brasil
+\\
+19 Julho, 2025}
+
+% Essa seção é dedicada para o resumo
+\begin{abstract}  
+
+O resumo deve ser escrito em um único parágrafo e seguir a ordem lógica: contextualização, objetivo, metodologia, resultados e conclusões. Para usar expressões matemáticas durante o texto use "\$" como exemplificado a seguir. The viscosity of a particular fluid is an interesting parameter that plays an important role in fluid dynamics of that fluid. We chose the common household cooking item canola oil. Using a ball drop, we set out to measure viscosity at various temperatures and create a model for $\eta (T)$ between 0$^{\circ}$C and 100$^{\circ}$C, as well as an accurate measurement for viscosity at room temperature, $\eta (T=20^{\circ}$C). It was found that the viscosity between 0$^{\circ}$C and 40$^{\circ}$C can be approximated using the function $\eta (T) = \alpha e^{-\beta T}$, where $\alpha = 440.65 \pm 30.40 \hspace{0.1cm} mPa\cdot s$ and $\beta = 0.03761 \hspace{0.1cm} \frac{1}{^{\circ}C}$ and that an estimation for viscosity at room temperature is equivalent to $207.6901\pm14.3306 \hspace{0.1cm} mPa\cdot s$. The precision of this measurement was limited by uncertainty in lab equipment used to measure various quantities as well as the image analysis software we used and the limited frame-rate of our camera.
+
+\end{abstract}
+
+
+
+\maketitle 
+
+\section{Fundamentação Teórica}
+\subsection{Modelo}
+
+
+Para colocar as referências, utilize o comando "cite{}", onde dentro das chaves temos o nome colocado lá na seção da bibliografia \cite{Tipler}.
+
+Para escrever equações devemos montar o bloco a seguir e chamar os comandos matemáticos. Note que é possível colocar uma etiqueta (\textit{label}) na equação para citar usando o comando: \ref{eq1}.
+%%%%%%%%%%%%%%%%%%%% Começo da Equação 1 %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{equation}\label{eq1}
+    F_{total} = \sum_{i=1}^{} F_{i} = F_{gravity} - F_{buoyant} - F_{stokes' drag}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%% Fim da Equação 1 %%%%%%%%%%%%%%%%%%%%%%%%%%
+Now, making the substitutions\cite{RHK} that $F_{total}=ma$, $F_{gravity}=mg$, $F_{buoyant} = m_{disp}g$\cite{Footnote}, and $F_{stokes drag}=6\pi \eta Rv$, we can create the equation:
+
+%As equações são numeradas automaticamente, para retirar a numeração basta colocar um asterisco no comando \begin{equation}:
+%%%%%%%%%%%%%%%%%%%% Começo da Equação 2 %%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation*}\label{eq2}
+    ma = mg - m_{disp}g - 6\pi \eta Rv
+\end{equation*} 
+%%%%%%%%%%%%%%%%%%%% Fim da Equação 2 %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Next we make the substitutions that $\Delta x=\frac{1}{2}at^2$ (and thus $a=\frac{2\Delta x}{t^2}$) and $v=\frac{\Delta x}{t}$.
+%%%%%%%%%%%%%%%%%%%% Começo da Equação 3 %%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}\label{eq3}
+    m\frac{2\Delta x}{t^2} = mg - m_{disp} - 6\pi \eta R\frac{\Delta x}{t}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%% Fim da Equação 3 %%%%%%%%%%%%%%%%%%%%%%%
+
+Now, we do some simple algebra to solve for $\eta$, as a function of our parameters $\Delta x$, $t$, $R$, $m$, and $m_{disp}$.
+
+\begin{equation}\label{eq4}
+\eta = \frac{mgt}{6\pi R \Delta x} - \frac{m_{disp}gt}{6\pi R \Delta x} - \frac{m}{3\pi Rt}
+\end{equation}
+
+
+
+\section{Materiais e Métodos}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus, sapien sit amet finibus pulvinar, metus leo laoreet erat, a congue neque nulla sed felis. Maecenas ut luctus dui. In hac habitasse platea dictumst. Donec diam erat, facilisis sed nulla vitae, facilisis laoreet justo. Nunc fermentum magna purus, molestie sodales massa gravida varius. Phasellus id sagittis tellus. Nullam ullamcorper volutpat porttitor. In vestibulum diam ex. Integer lectus tortor, consequat interdum risus nec, commodo imperdiet ex. Sed euismod sagittis sapien, eget pellentesque risus aliquam quis. Proin lacinia dolor dui, quis facilisis urna volutpat ac.
+
+
+\section{Resultados e Discussões}
+
+%%%%%%%%%%%%%%%%%%%% Começo da Figura 1 %%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht] %Esse ht vai forçar o bloco aparecer no local onde foi escrito. Veja que ao remover o ht, a tabela vai para outro lugar. Outras substituições são "h", "h!"
+    \includegraphics[width=0.3\textwidth]{Imagens/schematic.png} % Em colchetes ajusta-se o tamanho, e em chaves chama-se a figura que fez upload. O tamanho deve ter uma unidade de medida, nesse caso usamos \textwidth
+    \caption{Legenda da  sua figura. Não esqueça de colocar a fonte. Fonte: Modificado de \cite{Tipler}.}
+    \label{fig:setup} % Etiqueta para referenciar no texto. 
+\end{figure}
+%%%%%%%%%%%%%%%%%%%% Fim da Figura 1 %%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Começo da Tabela 1 %%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht] 
+    \begin{center}
+       \begin{tabular}{ c|c } % Aqui você define o número de colulas, a barra "|" é a divisória vertical, o "c" significa que o texto ficará centralizado. Para ficar à esquerda usa "l" de left, e à direita "r" de right.
+            \hline % Comando para colocar linha horizontal na tabela
+            Temperature$(^{\circ}$C) & Viscosity(mPa$\cdot$s) \\ %As duas barras no fim serve para quebrar linha no LaTeX (só funciona em blocos como esse e o de equações)
+            \hline
+            0 & 440.6482 $\pm$ 30.4047 \\ % As colunas são separadas por &
+            5 & 365.1094  $\pm$ 25.1925 \\
+            10 & 302.5199 $\pm$ 20.8739  \\
+            15 & 250.6599  $\pm$ 17.2955 \\
+            20 & 207.6901 $\pm$ 14.3306  \\
+            25 & 172.0864  $\pm$ 11.8740 \\
+            30 & 142.5862  $\pm$ 09.8384 \\
+            \hline
+        \end{tabular}
+        \caption{Viscosity values generated via the Exponential Fit}
+        \label{table1}
+    \end{center}
+\end{table}
+%%%%%%%%%%%%%%%%%%%% Fim da Tabela 1 %%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Começo da Tabela 2 %%%%%%%%%%%%%%%%%%%%%%%
+%Caso a tabela seja muito grande, usamos \begin{table*} para ficar fora da coluna.
+\begin{table*} 
+    \begin{center}
+       \centering
+        \begin{tabular}{ |l|c|c|c|c|c|c|c|c|c|c|c|c|c|  } \hline
+            Tensão & $t_1$ & $(div.)_1$ & $t_2$ & $(div.)_2$  & $s_1$ & $s_2$ & $v _1$ & $v_2$ & $v_1 + v_2$ & $v_1 - v_2$ & Q & n & r\\ 
+            (V) & (s) &  & (s) & & (mm) & (mm) & (mm/s) & (mm/s) & ($10^{-4}$m/s) & ($10^{-4}$m/s) & ($10^{-19}$ C) &  & ($10^{-7}$ m) \\ \hline
+            450 & 5.570  & 60 & 5.310  & 60 & 1.780 & 1.780 & 0.320 & 0.335 & 6.550 & 0.156 & 1.570 & 2 & 2.520 \\ \hline
+            450 & 3.640  & 30 & 6.560  & 60 & 0.890 & 1.780 & 0.245 & 0.271 & 5.160 & 0.268 & 1.620 & 2 & 3.300 \\ \hline
+            450 & 4.800  & 30 & 5.530 & 40 & 0.890 & 1.187 & 0.185 & 0.215 & 4.000 & 0.292 & 1.310 & 1 & 3.440 \\ \hline
+            450 & 8.080  & 60 & 7.610 & 60 & 1.780 & 1.780 & 0.220 & 0.234 & 4.540 & 0.136 & 1.020 & 1 & 2.350 \\ \hline
+            450 & 7.030  & 60 & 5.580 & 50 & 1.780 & 1.483 & 0.253 & 0.266 & 5.190 & 0.126 & 1.120 & 1 & 2.264 \\ \hline
+            300 & 3.830  & 40 & 2.380 & 35 & 1.187 & 1.038 & 0.310 & 0.436 & 7.460 & 1.260 & 7.630 & 8 & 7.163 \\ \hline
+            300 & 2.280  & 30 & 3.140 & 55 & 0.890 & 1.632 & 0.390 & 0.520 & 9.100 & 1.290 & 9.420 & 9 & 7.243 \\ \hline
+            300 & 10.680 & 60 & 8.030 & 50 & 1.780 & 1.483 & 0.167 & 0.185 & 3.510 & 0.181 & 1.360 & 1 & 2.707 \\ \hline
+            300 & 3.830  & 40 & 2.590 & 40 & 1.187 & 1.187 & 0.310 & 0.458 & 7.680 & 1.480 & 8.510 & 8 & 7.758 \\ \hline
+            300 & 5.670  & 50 & 4.160 & 50 & 1.483 & 1.483 & 0.262 & 0.357 & 6.180 & 0.950 & 5.480 & 5 & 6.207 \\ \hline
+            300 & 10.680 & 60 & 7.630 & 50 & 1.780 & 1.483 & 0.167 & 0.194 & 3.610 & 0.277 & 1.730 & 2 & 3.355 \\ \hline
+            300 & 2.570  & 20 & 3.350 & 30 & 0.593 & 0.890 & 0.231 & 0.266 & 4.970 & 0.348 & 2.670 & 3 & 3.758 \\ \hline
+            300 & 7.330  & 53 & 6.780 & 60 & 1.572 & 1.780 & 0.215 & 0.263 & 4.770 & 0.480 & 3.010 & 3 & 4.415 \\ \hline
+            300 & 8.720  & 60 & 8.270 & 60 & 1.780 & 1.780 & 0.204 & 0.215 & 4.190 & 0.111 & 1.270 & 1 & 2.123 \\ \hline
+        \end{tabular}
+        \caption{Medições das gotículas para os potenciais 450 V e 300 V. Na tabela, os intervalos de tempo $t_{i}$, a distância percorrida pela gota de óleo $s_{i}$, a velocidade $v_{i}$, o número de divisões percorridas pela gota $div.$, a carga da gota $Q$ e a carga da gota dividida pelo menor valor encontrado $q$, O índice $i$ = 1 corresponde as medidas da subida e, para a descida, adotamos o índice $i$ = 2.}
+        \label{tabela}
+    \end{center}
+\end{table*}
+%%%%%%%%%%%%%%%%%%%% Fim da Tabela 2 %%%%%%%%%%%%%%%%%%%%%%%
+ 
+
+\section{Conclusão}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus, sapien sit amet finibus pulvinar, metus leo laoreet erat, a congue neque nulla sed felis. Maecenas ut luctus dui. In hac habitasse platea dictumst. Donec diam erat, facilisis sed nulla vitae, facilisis laoreet justo. Nunc fermentum magna purus, molestie sodales massa gravida varius. Phasellus id sagittis tellus. Nullam ullamcorper volutpat porttitor. In vestibulum diam ex. Integer lectus tortor, consequat interdum risus nec, commodo imperdiet ex. Sed euismod sagittis sapien, eget pellentesque risus aliquam quis. Proin lacinia dolor dui, quis facilisis urna volutpat ac.
+
+\section{Agradecimentos}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus, sapien sit amet finibus pulvinar, metus leo laoreet erat, a congue neque nulla sed felis. Maecenas ut luctus dui. 
+
+%%%%%%%%%%%%%%%%%%%%%%% REFERENCIAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{10}
+%Em chaves está o nome que será chamado durante o texto para citar a referência.
+\bibitem{Tipler} Paul A. Tipler e Ralph Llewellyn. Modern Physics. Vol. 5. W. H. Freeman e Company, 2007. isbn: 978-0716775508.
+
+\bibitem{Engines} Kopeliovich, Dmitri. Effect of Oil Viscosity on Hydrodynamic Friction of Engine Bearings. SubsTech Substance and Technologies, 3 Feb. 2018. \url{http://www.substech.com/dokuwiki/doku.php?id=effect_of_oil_viscosity_on_hydrodynamic_friction_of_engine_bearings}
+
+\bibitem{RHK} Halliday, David, et al. Physics. 5th ed., vol. 1, Wiley, 2002.
+
+\bibitem{Footnote} Note that $m_{disp}$ refers to the mass of the displaced fluid.
+
+\end{thebibliography}
+
+
+\end{document}
