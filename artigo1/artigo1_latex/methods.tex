@@ -1,42 +1,53 @@
 \section{Metodologia}
 
-O aparato experimental foi montado conforme a figura \ref{} e o laser foi alinhado. 
+O aparato experimental foi montado conforme o esquema na figura \ref{fig: interferometer} e o laser foi alinhado. 
 Uma lente convergente foi posicionada em frente ao laser para que os padrões formados possam ser observados em distâncias condizentes com as dimensões do laboratório. 
 O espelho $M_1$, em frente ao laser, pode ser movido para frente e para trás com um parafuso micrométrico. 
-O outro espelho, $M_2$, possui parafusos de regulagem, que foram usados para centralizar o padrão de interferência no anteparo. 
+O outro espelho, $M_2$, possui parafusos de regulagem, que foram usados para centralizar o padrão de interferência no anteparo \cite{roteiro}. 
 
-\begin{table}\label{tab: materials}
-\caption{Materiais utilizados nos experimentos.}
-\begin{tabular}{c|c|c|c}
-	
-
+\begin{table}[h]\label{tab: materials}
+\centering
+\begin{tabular}{lc}
+\toprule
+\textbf{Materiais} & \textbf{Qntd.} \\
+\midrule
+ Divisor de feixes 50/50 &  1 \\
+ Espelhos planos & 2 \\
+ Parafuso micrométrico & 1 \\
+ Laser de HeNe (632,8 nm, 1 mW, 220 V AC) & 1 \\
+ Lente convergente & 1 \\
+ Bomba de vácuo manual com manômetro &  1 \\
+ Câmara de vidro & 1 \\
+ Placa de vidro (espessura 4 mm) & 1 \\
+ Tela branca (anteparo) & 1 \\
+\bottomrule
 \end{tabular}
+\caption{Materiais utilizados nos experimentos.}
 \end{table}
 
 \subsection*{Parte 1: determinação do $\lambda$ do laser}
-Utilizando o parafuso micrométrico, foi possível variar a posição de $M_1$, e assim alterar o caminho óptico. 
-O espelho foi colocado inicialmente em uma posição $x_0$ correspondente a um mínimo de interferência, que foi anotada. 
-O parafuso micrométrico foi girado lentamente até que foram contados $m=60$ mínimos. 
-O valor final $x_1$ foi medido e foi calculada a diferença $d = |x_1 - x_0|$. 
-A luz percorre esse trajeto indo e voltando, e a alavanca que liga o parafuso ao espelho tem um fator de transmissão de 1:10. 
-Assim, a diferença de caminho óptico é $2d/10=d/5$.
-Utilizando isso na eq. \eqref{eq: lambda}, obtemos
+Sejam $d_1$ e $d_2$ as distâncias entre o divisor e os espelhos $M_1$ e $M_2$, respectivamente.
+Se a luz se propaga apenas através do ar pelos dois caminhos, então a diferença de caminho óptico entre os dois feixes é $2|d_2 - d_1|$, pois a luz passa pelo mesmo trecho duas vezes. 
+Utilizando o parafuso micrométrico para controlar a posição de um dos espelhos, a posição inicial $x_0$ foi tomada como sendo tal que resulte em um mínimo de interferência. 
+O caminho óptico foi variado ao girar o parafuso micrométrico e foram contados $m=60$ mínimos. 
+A posição final $x_1$ foi anotada. 
+O parafuso é ligado ao espelho por uma alavanca com fator de transmissão de 1:10, então a diferença de caminho óptico é $\Lambda = 2|x_1 - x_0|/10 = |x_1 - x_0|/5.$
+Substituindo na eq. \eqref{eq: lambda(LAMBDA)}, obtemos que o valor do comprimento de onda do laser usado é dado por 
 \begin{equation}\label{eq: lambda(d)}
 	\lambda_0 = \frac{1}{5}\left(\frac{d}{m}\right)
 \end{equation}
 O processo foi repetido um total de 5 vezes.
 
-\subsection*{Parte 2: determinação do $n$ do ar}
-O índice de refração do ar não é uma constante absoluta. 
-Para gases ideais à baixa pressão, temos que o índice de refração aumenta linearmente com a pressão, e que $p = 0 \implies n = n_0 = 1$. i.e., 
+\subsection*{Parte 2: determinação do $n$ do ar} 
+Para gases ideais à baixa pressão, temos que seu índice de refração de aumenta linearmente com a pressão, e que $p = 0 \implies n = n_0 = 1$, i.e., 
 \begin{equation}\label{eq: n(p)}
 	n(p) = 1 + \kappa p,
 \end{equation}
 
 \noindent onde $\kappa = \partial n / \partial p$. Se a pressão do ar em um trecho de comprimento $L$ em um dos braços do intereferômetro sofrer uma variação de pressão de módulo $\Delta p$, equivalente a uma variação de $\Delta n$ no índice de refração, e isso causar uma variação de $m$ mínimos, teremos 
 \begin{align}\label{eq: kappa}
-	m &= \frac{2L}{\lambda} |\Delta n| \\[4pt]
-	\implies \kappa = \frac{\Delta n}{\Delta p} &= \frac{\lambda}{2L} \frac{m}{\Delta p}.
+	m = \frac{2L}{\lambda} |\Delta n| \notag \\[4pt]
+	\implies \kappa = \frac{\Delta n}{\Delta p} = \frac{\lambda}{2L} \frac{m}{\Delta p}.
 \end{align}
 
 \noindent Assim, basta montar um gráfico de $m \times \Delta p$ e calcular seu coeficiente angular para calcular o valor de $\kappa$ pela eq. \eqref{eq: kappa}. 
@@ -46,13 +57,14 @@ A célula foi posicionada de modo a permitir a passagem do feixe indo e voltando
 Utilizando a bomba, a pressão dentro da célula foi reduzida até o manômetro indicar $ \Delta p \approx $ 800 mbar abaixo da pressão atmosférica. Por causa de má vedação, o ar lentamente retornava para dentro da célula, fazendo a pressão voltar lentamente à inicial. Foi gravado um vídeo em que é possível ver o padrão alternando entre máximos e mínimos a medida que o ponteiro do manômetro vai de -800 mbar à 0 mbar. Desacelerando o vídeo, foi possível contar os mínimos e construir uma relação entre $\Delta p$ e $\Delta n$. Foram considerados 6 vídeos diferentes.
 
 \subsection*{Parte 3: determinação do $n$ do vidro}
-Um fino painel de vidro de foi fixo entre o divisor de feixe e $M_2$ por um parafuso, de modo que foi possível rotacionar o painel em torno de um eixo vertical. 
+Uma placa de vidro de espessura $s = 4$ mm foi fixada entre o divisor de feixe e $M_2$ por um parafuso, de modo que era possível rotacionar o painel em torno de um eixo vertical. 
 Inicialmente, o painel foi posto perpendicularmente ao feixe ($\theta_0 = 0^\circ$), posição que corresponde a um mínimo.
 Então, o painel lentamente foi girado no sentido anti-horário (aumentando $\theta$), até que foram contados $m$ mínimos de interferência. 
 
 Ao girar o painel, a distância que a luz deve se propagar dentro do vidro aumenta, o que por sua vez aumenta o caminho óptico (pois $n_{vidro} > n_{ar}$).
-Para pequenas variações de $\theta$ em torno de $0^{\circ}$, $n=n(\theta, m)$ é dado por
+De acordo com \citep{andrews1960optics}, para pequenas variações de $\theta$ em torno de $0^{\circ}$, $n=n(\theta, m)$ é dado por 
 \begin{equation}
-	n = \frac{ (2s-m\lambda)(1-\cos\theta)+m^2\lambda^2/4s}{   2s(1-cos\theta)-m\lambda   }
+	n = \frac{ (2s-m\lambda)(1-\cos\theta) + (m^2\lambda^2/4s)}{   2s(1-cos\theta)-m\lambda   }
 \end{equation}
-Foram feitas 9 medidas ao todo, e para cada uma, foi anotada o valor final de $\theta$ e número $m$.
+Foram feitas 9 medidas ao todo, e para cada uma, foi anotada o valor final de $\theta$, o número $m$, e o valor calculado para $n$.
+Foi considerado o valor de $\lambda$ obtido na parte 1.

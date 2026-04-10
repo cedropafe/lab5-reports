@@ -1,22 +1,39 @@
 \section{Fundamentação Teórica}
+
+\begin{table}[b]
+\centering
+\begin{tabular}{ll}
+\hline
+ $\omega$ & - Frequência angular \\
+ $\lambda$ & - Comprimento de onda \\
+ $\lambda_0$ & - Comprimento de onda no vácuo \\
+ $k$ & - Número de onda \\
+ $k_0$ & - Número de onda no vácuo \\
+ $n$ &  - Índice de refração \\
+ $\phi$& - Fase de onda \\
+ $\Lambda$ & - Caminho óptico \\
+\hline
+\end{tabular}
+\caption{Símbolos utilizados.}
+\end{table}
+
 \subsection*{Interferência de ondas planas}
 Utilizando notação complexa, o campo elétrico em um modo único de radiação eletromagnética pode ser dado pela função escalar
 \begin{equation}
 E(\mathbf{r}, t) = Re \left[ v(\mathbf{r}) e^{-i\omega t} \right].
 \end{equation}
 
-\noindent A intensidade (energia por unidade de tempo e de área) da luz devido a onda é proporcional a $|E|^2$. Como $\omega$ é da ordem de $10^{15} $ Hz, detectores apenas captam a média temporal da intensidade, que é então proporcional à
+\noindent A intensidade (energia por unidade de tempo e de área) da luz devido a onda é proporcional a $|E|^2$ \citep{moyses4}. Como $\omega$ é da ordem de $10^{15} $ Hz, detectores apenas captam a média temporal da intensidade, que é então proporcional à
 \begin{equation}
 I(\mathbf{r}) = |v(\mathbf{r})|^2.
 \end{equation}
 
 Se temos duas ondas, $E_1$ e $E_2$, a onda resultante é simplesmente $E = E_1 + E_2$. Sua intensidade é
-\begin{equation}
+\begin{equation}\label{eq: intensity2}
 I(\mathbf{r}) = |v_1 + v_2|^2.
 \end{equation}
-
-\noindent onde $A$ é a amplitude (real) de $E$. 
-Fazendo $v_j  = |v_j|e^{i\phi_j}$, a eq. \eqref{eq: resulting intensity} se torna
+ 
+Fazendo $v_j  = |v_j|e^{i\phi_j}$, a eq. \eqref{eq: intensity2} se torna
 \begin{equation}\label{eq: interference formula}
 \begin{aligned}
 I(\mathbf{r}) &= \left| |v_1|e^{i\phi_1} + |v_2|e^{i\phi_2} \right|^2 \\
@@ -32,15 +49,15 @@ e a mínima, $(\sqrt{I_1} - \sqrt{I_2})^2$, quando $\Delta\phi = (2m+1)\pi$, ond
 
 \subsection*{Interferômetro de Michelson}
 Desenvolvido por Albert Michelson em 1887, essa configuração é muito usada para experimentos de interferometria. 
-No interferômetro de Michelson, um feixe proveniente de um laser incide sobre um divisor de feixe a $45^\circ$, gerando dois feixes perpendiculares entre si.
-Os feixes incidem perpendicularmente em dois espelhos, $M_1$ e $M_2$, que então se recombinam no divisor. 
-Uma parte volta em direção ao laser, e outra é projetada em um anteparo, onde é possível observar a intensidade resultante. 
+No interferômetro de Michelson, um feixe proveniente de um laser incide sobre um divisor de feixe de espessura desprezível a $45^\circ$, gerando dois feixes perpendiculares entre si, e com intensidades iguais.
+Os feixes incidem perpendicularmente em dois espelhos, $M_1$ e $M_2$, perpendiculares entre si, que então se recombinam no divisor. 
+Uma parte volta em direção ao laser, e outra é projetada em um anteparo, onde é possível observar a intensidade resultante \cite{andrews1960optics}. 
 
 \begin{figure}[b]\label{fig: interferometer}
 \centering
 \caption{Interferômetro de Michelson}
 \includegraphics[height=5cm]{imagens/interferometer.png}
-\small{\textit{\\Fonte: roteiro experimental.}}
+\small{\textit{\\Fonte: \cite{roteiro}.}}
 \end{figure}
 
 Como os dois feixes vieram da mesma fonte, suas amplitudes coincidem. 
@@ -52,7 +69,7 @@ Fazendo $I_1 = I_2$ na eq. \eqref{eq: interference formula}, obtemos
 \end{aligned}
 \end{equation}
 
-\noindent A radiação eletromagnética proveniente de um laser pode ser modelada como uma onda plana monocromática que se propaga em uma dimensão.
+\noindent A radiação eletromagnética proveniente de um laser pode ser modelada como uma onda plana monocromática que se propaga em uma dimensão \cite{moyses4}.
 Temos então
 \begin{equation}
 	v(\mathbf{r}) = E_0 \, e^{i(k_0 \Lambda + \delta)}.
@@ -60,7 +77,9 @@ Temos então
 
 \noindent Como a fase inicial $\delta$ é igual para os dois feixes, a diferença de fase nesse caso será apenas devido ao termo $k_0 \Lambda = 2\pi \Lambda / \lambda_0$. 
 Devido a periodicidade de $2\pi$ no padrão de interferência, quando causamos uma variação $\Lambda$ no caminho óptico de um percurso em relação ao outro e contamos um número inteiro $m$ de variação de mínimos ou máximos de interferência, a seguinte relação será verdadeira:
-\begin{equation}\label{eq: lambda}
-\frac{2\pi \Lambda}{\lambda_0} = 2m\pi \implies \lambda_0 = \frac{\Lambda}{m}.
-\end{equation}
+\begin{align}\label{eq: lambda(LAMBDA)}
+\frac{2\pi \Lambda}{\lambda_0} = 2m\pi \notag \\[1em]
+\implies \lambda_0 \, m = \Lambda.
+\end{align}
 
+Este trabalho consiste em 3 partes, cada uma tratando da utilização do intereferômetro de Michelson para determinar alguma grandeza óptica. Na parte 1, buscamos determinar o comprimento de onda do laser de HeNe; na parte 2, buscamos determinar como o índice de refração do ar varia com a pressão; e na parte 3, buscamos determinar o índice de refração de um vidro.

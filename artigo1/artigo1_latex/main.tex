@@ -12,7 +12,9 @@
 \usepackage{parskip}
 \usepackage[brazilian]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{dcolumn}   
+\usepackage{float}
+\usepackage{dcolumn}
+\usepackage{booktabs}   
 \usepackage{bm}        
 \usepackage{amsfonts}  % Fontes de matemática
 \usepackage{amsmath}   % Funções matemáticas
@@ -40,6 +42,8 @@ Abril, 2026}
 \input{conclusion.tex}
 
 %%%%%%% REFERENCIAS %%%%%%%%%
-\input{biblio.tex}
+\bibliography{biblio}
+\bibliographystyle{apsrev}
+\nocite{*}
 
 \end{document}

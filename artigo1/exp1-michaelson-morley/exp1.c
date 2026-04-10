@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 int main(){
@@ -11,21 +12,36 @@ if (data == NULL) {
 }
 
 int n;
-double x0, x1, dx, lambda;
-double Slambda = 0;
+double x0, x1, dx, LAMBDA;
+double Slambda, Mlambda;
+double lambda[5];
+double error, Serror, Merror, incert;
 
-for (int j=1; j<=5; j++){
-int read = fscanf(data, "%d %lf %lf", &n, &x0, &x1);
+for (int j=0; j<5; j++){
+fscanf(data, "%d %lf %lf", &n, &x0, &x1);
 
 dx = x1 - x0;
-lambda = dx*2./10./1000./60.*1e9;
-Slambda += lambda;
-printf("comprimento de onda: %.15lf \n", lambda);
+LAMBDA = dx*2./10./1000.*1e9;
+lambda[j] = LAMBDA/60.;
+Slambda += lambda[j];
+
+printf("%.2lf & %.2lf & %.2lf & %.2lf \n", x0, x1, LAMBDA, lambda[j]);
 }
 
-printf("comprimento de onda medio: %.15lf \n", Slambda/n);
-
 fclose(data);
+
+Mlambda = Slambda/n;
+printf("comprimento de onda medio: %.2lf \n", Mlambda);
+
+for (int j=0; j<5; j++){
+error = abs(lambda[j] - Mlambda );
+Serror += error;
+}
+
+Merror = Serror/n;
+incert = Merror / Mlambda *100 ;
+printf("desvio médio: %.2lf \n", Merror);
+printf("incerteza: %.2lf%% \n", incert);
 
 return 0;
 }
