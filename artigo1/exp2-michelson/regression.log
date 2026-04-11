@@ -1,0 +1,25 @@
+Number of observations			 = 5
+Mean of independent variable		 = 510.4
+Mean of dependent variable		 = 15
+Standard dev. of ind. variable		 = 222.1718
+Standard dev. of dep. variable		 = 7.905694
+Correlation coefficient			 = 0.9970553
+Regression coefficient (SLOPE)		 = 0.03547892
+Standard error of coefficient		 = 0.001575456
+t - value for coefficient		 = 22.51977
+Regression constant (INTERCEPT)		 = -3.108439
+Standard error of constant		 = 0.8629079
+t - value for constant			 = -3.602284
+
+Analysis of variance
+Source		 d.f	 Sum of squares	 Mean Square	 F
+Regression	   1	248.5298	248.5298	507.14
+Residual	    3	1.470185	0.4900615
+Total		    4	250
+
+
+y = -3.1084 + 0.035479 * x
+
+Regression of set 0 results to set 1
+[Error] syntax error: NU5 
+[Error] Specify major tick spacing
