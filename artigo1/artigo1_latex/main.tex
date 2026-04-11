@@ -1,27 +1,6 @@
 \documentclass[aps,twocolumn,preprintnumbers]{revtex4}
 
-%Os pacotes abaixo adicionam comandos LaTeX que facilitam a escrita e formatação. Caso tenha alguma dúvida sobre a funcionalidade, pesquise o nome do pacote no link: https://www.overleaf.com/learn/latex/Understanding_packages_and_class_files
-
-\usepackage{graphicx}  % Inclui arquivos de figuras
-\usepackage{subfigure}
-\usepackage{multirow}
-
-\linespread{1.1}
-\usepackage{fancyhdr}
-\usepackage{longtable}
-\usepackage{parskip}
-\usepackage[brazilian]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{float}
-\usepackage{dcolumn}
-\usepackage{booktabs}   
-\usepackage{bm}        
-\usepackage{amsfonts}  % Fontes de matemática
-\usepackage{amsmath}   % Funções matemáticas
-\usepackage{amssymb}   % Símbolos matemáticos
-\usepackage{lipsum}
-
-\setlength{\parindent}{10pt}
+\input{preamble.tex}
 
 \begin{document}
 
@@ -31,7 +10,6 @@
 \\
 Abril, 2026}
 
-% Essa seção é dedicada para o resumo
 \input{abstract.tex}
 
 \maketitle 
@@ -40,10 +18,10 @@ Abril, 2026}
 \input{methods.tex}
 \input{results.tex}
 \input{conclusion.tex}
+\input{thanks}
 
-%%%%%%% REFERENCIAS %%%%%%%%%
+\bibliographystyle{apsrev4-1}
 \bibliography{biblio}
-\bibliographystyle{apsrev}
 \nocite{*}
 
 \end{document}

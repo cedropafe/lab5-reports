@@ -2,8 +2,9 @@
 
 \begin{table}[b]
 \centering
+\caption{Símbolos utilizados.}
 \begin{tabular}{ll}
-\hline
+\toprule\midrule
  $\omega$ & - Frequência angular \\
  $\lambda$ & - Comprimento de onda \\
  $\lambda_0$ & - Comprimento de onda no vácuo \\
@@ -12,9 +13,8 @@
  $n$ &  - Índice de refração \\
  $\phi$& - Fase de onda \\
  $\Lambda$ & - Caminho óptico \\
-\hline
+\midrule\bottomrule
 \end{tabular}
-\caption{Símbolos utilizados.}
 \end{table}
 
 \subsection*{Interferência de ondas planas}
@@ -23,7 +23,7 @@ Utilizando notação complexa, o campo elétrico em um modo único de radiação
 E(\mathbf{r}, t) = Re \left[ v(\mathbf{r}) e^{-i\omega t} \right].
 \end{equation}
 
-\noindent A intensidade (energia por unidade de tempo e de área) da luz devido a onda é proporcional a $|E|^2$ \citep{moyses4}. Como $\omega$ é da ordem de $10^{15} $ Hz, detectores apenas captam a média temporal da intensidade, que é então proporcional à
+\noindent A intensidade (energia por unidade de tempo e de área) da luz devido a onda é proporcional a $|E|^2$ \ccite{moyses4}. Como $\omega$ é da ordem de $10^{15} $ Hz, detectores apenas captam a média temporal da intensidade, que é então proporcional à
 \begin{equation}
 I(\mathbf{r}) = |v(\mathbf{r})|^2.
 \end{equation}
@@ -51,13 +51,14 @@ e a mínima, $(\sqrt{I_1} - \sqrt{I_2})^2$, quando $\Delta\phi = (2m+1)\pi$, ond
 Desenvolvido por Albert Michelson em 1887, essa configuração é muito usada para experimentos de interferometria. 
 No interferômetro de Michelson, um feixe proveniente de um laser incide sobre um divisor de feixe de espessura desprezível a $45^\circ$, gerando dois feixes perpendiculares entre si, e com intensidades iguais.
 Os feixes incidem perpendicularmente em dois espelhos, $M_1$ e $M_2$, perpendiculares entre si, que então se recombinam no divisor. 
-Uma parte volta em direção ao laser, e outra é projetada em um anteparo, onde é possível observar a intensidade resultante \cite{andrews1960optics}. 
+Uma parte volta em direção ao laser, e outra é projetada em um anteparo, onde é possível observar a intensidade resultante \ccite{andrews1960optics}. 
 
-\begin{figure}[b]\label{fig: interferometer}
+\begin{figure}[b]
 \centering
 \caption{Interferômetro de Michelson}
 \includegraphics[height=5cm]{imagens/interferometer.png}
 \small{\textit{\\Fonte: \cite{roteiro}.}}
+\label{fig: interferometer}
 \end{figure}
 
 Como os dois feixes vieram da mesma fonte, suas amplitudes coincidem. 
