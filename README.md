@@ -1,4 +1,4 @@
-# Relatórios experimentais da disciplina de Física 5 experimental
+# Relatórios experimentais da disciplina de lab5
 Esse projeto é apenas uma maneira de registrar os relatórios que eu estou fazendo
 para disciplina de Estrutura da Matéria Experimental -- lab5 para os íntimos. Dessa maneira, eu posso contornar
 a nessecidade de usar o falecido overleaf (R.I.P.) para salvar projetos latex na nuvem. A pedido da professora,
