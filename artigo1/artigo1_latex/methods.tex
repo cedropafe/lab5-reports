@@ -3,7 +3,7 @@
 O aparato experimental foi montado conforme o esquema na Fig. \ref{fig: interferometer} e o laser foi alinhado. 
 Uma lente convergente foi posicionada em frente ao laser para que os padrões formados possam ser observados em distâncias condizentes com as dimensões do laboratório. 
 O espelho $M_1$, em frente ao laser, pode ser movido para frente e para trás com um parafuso micrométrico. 
-O outro espelho, $M_2$, possui parafusos de regulagem, que foram usados para centralizar o padrão de interferência no anteparo \ccite{roteiro}. 
+O outro espelho, $M_2$, possui parafusos de regulagem, que foram usados para centralizar o padrão de interferência no anteparo. 
 
 \begin{table}[h]
 \centering
@@ -32,32 +32,32 @@ Se a luz se propaga apenas através do ar pelos dois caminhos, então a diferen�
 Utilizando o parafuso micrométrico para controlar a posição de um dos espelhos, a posição inicial $x_0$ foi tomada como sendo tal que resulte em um mínimo de interferência. 
 O caminho óptico foi variado ao girar o parafuso micrométrico e foram contados $m=60$ mínimos. 
 A posição final $x_1$ foi anotada. 
-O parafuso é ligado ao espelho por uma alavanca com fator de transmissão de 1:10, então a diferença de caminho óptico é $\Lambda = 2|x_1 - x_0|/10 = |x_1 - x_0|/5.$
+O parafuso é ligado ao espelho por uma alavanca com fator de transmissão de 1:10, então a diferença de caminho óptico é $\Lambda = 2|x_1 - x_0|/10 = |\Delta x|/5.$
 Substituindo na eq. \eqref{eq: lambda(LAMBDA)}, obtemos que o valor do comprimento de onda do laser usado é dado por 
 \begin{equation}\label{eq: lambda(d)}
-	\lambda_0 = \frac{1}{5}\left(\frac{d}{m}\right)
+	\lambda_0 = \frac{1}{5} \frac{|\Delta x|}{m} \;.
 \end{equation}
 O processo foi repetido um total de 5 vezes.
 
-\subsection*{Parte 2: determinação de $n_{ar}$} 
+\subsection*{Parte 2: determinação do $n$ do ar} 
 Para gases ideais à baixa pressão, temos que seu índice de refração de aumenta linearmente com a pressão, e que $p = 0 \implies n = n_0 = 1$, i.e., 
 \begin{equation}\label{eq: n(p)}
 	n(p) = 1 + \kappa p,
 \end{equation}
 
-\noindent onde $\kappa = \partial n / \partial p$. Se a pressão do ar em um trecho de comprimento $L$ em um dos braços do intereferômetro sofrer uma variação de pressão de módulo $P$, equivalente a uma variação de $\Delta n$ no índice de refração, e isso causar uma variação de $m$ mínimos, teremos 
-\begin{align}\label{eq: kappa}
-	m = \frac{2L}{\lambda} |\Delta n| \notag \\[4pt]
+\noindent onde $\kappa = \partial n / \partial p > 0$. Se a pressão do ar em um trecho de comprimento $L$ em um dos braços do intereferômetro sofrer uma variação de pressão de módulo $P$, equivalente a uma variação de módulo $\Delta n$ no índice de refração, e isso causar uma variação de $m$ mínimos, teremos 
+\begin{equation}\label{eq: kappa}
+	m = \frac{2L}{\lambda} \Delta n 
 	\implies \kappa = \frac{\Delta n}{P} = \frac{\lambda}{2L} \frac{m}{P}.
-\end{align}
+\end{equation}
 
 \noindent Assim, basta montar um gráfico de $m \times P$ e calcular seu coeficiente angular para calcular o valor de $\kappa$ pela eq. \eqref{eq: kappa}. 
 
 Entre o divisor de feixe e um dos espelhos, foi fixada uma célula para armazenamento de ar de comprimento $L=4,1$ cm, que é ligada por uma mangueira a uma bomba de vácuo manual com manômetro. 
 A célula foi posicionada de modo a permitir a passagem do feixe indo e voltando, sem alterar sua trajetória. 
-Utilizando a bomba, a pressão dentro da célula foi reduzida até o manômetro indicar $ P \approx $ 800 mbar abaixo da pressão atmosférica. Por causa de má vedação, o ar lentamente retornava para dentro da célula, fazendo a pressão voltar lentamente à inicial. Foi gravado um vídeo em que é possível ver o padrão alternando entre máximos e mínimos a medida que o ponteiro do manômetro vai de -800 mbar à 0 mbar. Desacelerando o vídeo, foi possível contar os mínimos e construir uma relação entre $n$ e $P$. Foram considerados 10 vídeos diferentes.
+Utilizando a bomba, a pressão dentro da célula foi reduzida até o manômetro indicar $ P \approx $ 800 mbar abaixo da pressão atmosférica. Por causa de má vedação, o ar lentamente retornava para dentro da célula, fazendo a pressão voltar lentamente à inicial. Foi gravado um vídeo em que é possível ver o padrão alternando entre máximos e mínimos a medida que o ponteiro do manômetro vai de -800 mbar à 0 mbar. Desacelerando o vídeo, foi possível contar os mínimos e construir uma relação entre $m$ e $P$. Foram considerados 10 vídeos diferentes.
 
-\subsection*{Parte 3: determinação de $n_{vidro}$}
+\subsection*{Parte 3: determinação do $n$ do vidro}
 Uma placa de vidro de espessura $s = 4$ mm foi fixada entre o divisor de feixe e $M_2$ por um parafuso, de modo que era possível rotacionar o painel em torno de um eixo vertical. 
 Inicialmente, o painel foi posto perpendicularmente ao feixe ($\theta_0 = 0^\circ$), posição que corresponde a um mínimo.
 Então, o painel lentamente foi girado no sentido anti-horário (aumentando $\theta$), até que foram contados $m$ mínimos de interferência. 
@@ -65,7 +65,6 @@ Então, o painel lentamente foi girado no sentido anti-horário (aumentando $\th
 Ao girar o painel, a distância que a luz deve se propagar dentro do vidro aumenta, o que por sua vez aumenta o caminho óptico (pois $n_{vidro} > n_{ar}$).
 De acordo com \ccite{andrews1960optics}, para pequenas variações de $\theta$ em torno de $0^{\circ}$, $n=n(\theta, m)$ é dado por 
 \begin{equation}
-	n = \frac{ (2s-m\lambda)(1-\cos\theta) + (m^2\lambda^2/4s)}{   2s(1-cos\theta)-m\lambda   }
+	n = \frac{ (2s-m\lambda)(1-\cos\theta) + (m^2\lambda^2/4s)}{   2s(1-cos\theta)-m\lambda   } \;.
 \end{equation}
 Foram feitas 9 medidas ao todo, e para cada uma, foi anotada o valor final de $\theta$, o número $m$, e o valor calculado para $n$.
-Foi considerado o valor de $\lambda$ obtido na parte 1.
