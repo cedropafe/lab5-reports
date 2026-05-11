@@ -1,15 +1,26 @@
 \section{Resultados e discussões}
 
-\begin{table*}[h]
+Os dados obtidos no experimento são mostrados na Tab. \ref{tab: dados}. 
+Na Fig. \ref{fig: carga_vs_raio} é mostrada uma relação entre a carga e o raio calculados utilizando as equações \eqref{eq: r} e \eqref{eq: q'} para cada par $(t_s, t_d)$. 
+Antecipando o resultado de que a carga em cada bolha será um multiplo inteiro de um valor fundamental $e=\qty{1,602e-19}{\coulomb}$ \cite{millikan}, a carga medida é dada em unidades dessa constante $e$.
+ 
+\begin{figure}[h]
+\centering
+\caption{Carga vs raio da bolha}
+\includegraphics[width=.9\linewidth]{imagens/Q_vs_R.eps}
+\label{fig: carga_vs_raio}
+\end{figure} 
+ 
+\begin{table*}[t]
 \centering
 \caption{Dados obtidos no experimento.}
-%\resizebox{\textwidth}{!}{
+\resizebox{\textwidth}{!}{
 \begin{tabular}{ccccc|ccccc|ccccc}
 \toprule\midrule
 \multicolumn{5}{c}{Parte 1} & \multicolumn{5}{c}{Parte 2} & \multicolumn{5}{c}{Parte 3} \\
-$U$ & $t_s$ & $t_d$ & $r$ & $q$ &
-$U$ & $t_s$ & $t_d$ & $r$ & $q$ &
-$U$ & $t_s$ & $t_d$ & $r$ & $q$ \\
+$V$ & $t_s$ & $t_d$ & $r$ & $q$ &
+$V$ & $t_s$ & $t_d$ & $r$ & $q$ &
+$V$ & $t_s$ & $t_d$ & $r$ & $q$ \\
 \multicolumn{1}{c}{$(\unit{\volt})$} &
 \multicolumn{1}{c}{$\quad(\unit{\s})\quad$} &
 \multicolumn{1}{c}{$(\unit{\s})$} &
@@ -50,19 +61,33 @@ $U$ & $t_s$ & $t_d$ & $r$ & $q$ \\
 400 & 1,120 & 1,490 & 5,195 & 2,584 & 551 & 1,063 & 1,159 & 3,080 & 1,283 & 602 & 0,735 & 1,103 & 7,434 & 3,562 \\
 \midrule\bottomrule
 \end{tabular}
-%}
+}
 \label{tab: dados}
 \end{table*}
+ 
+ 
+Foi calculado o valor médio da distância entre um ponto e o múltiplo inteiro de $e$ mais próximo, e foi encontrado o valor de $\Delta q = 0,233\,e$. 
+Os pontos em que $ne - \Delta q \leq q \leq ne + \Delta q,\, n \in \mathbb{N}$, estão destacados em preto na Fig. \ref{fig: carga_vs_raio}, enquanto	que os demais estão em vermelho. 
+Ou seja, os pontos em vermelho são aqueles que desviam consideravelmente do valores teoricamente permitidos para a carga.
 
-\begin{figure}[h]
-\centering
-\caption{Carga vs raio da bolha}
-\includegraphics[width=.9\linewidth]{imagens/Q_vs_R.eps}
-\end{figure}
+É possível ver na Fig. \ref{fig: carga_vs_raio} que os pontos tendem a se agrupar em torno de múltiplos inteiros de $e$, indicados pelas linhas horizontais tracejadas. 
+Embora haja muitos pontos vermelhos, nota-se que a medida que os valores de $q$ aumentam, a razão entre pontos vermelhos e pretos diminui. 
+Isso se dá provavelmente porque quanto menores são os valores numéricos das medidas, maior é a incerteza.
+ 
+Assim, os dados obtidos corroboram a hipótese de que as cargas ocorrem em múltiplos inteiros de $e$. 
+No entanto, a baixa quantidade de pontos com $q$ alto torna difícil uma conclusão assertiva. 
+Portanto, faz-se necessário realizar mais medições para obter tais pontos.
 
-\begin{figure}[h]
+Assumindo agora que $q = ne$, mas com $e$ sendo algum valor desconhecido, é possível utilizar os dados obtidos para estimar o valor numérico de $e$. Para cada valor de $q$, foi associado um número natural $n$, obtido ao arredondar $q/(\qty{1,602e19}{\coulomb})$. 
+Na Fig. \ref{fig: carga_vs_n}, é mostrada a relação entre $q$ e $n$. Realizando uma regressão linear, foi obtido o coeficiente angular $e = \qty{1,658e-19}{\coulomb}$.
+
+Comparando com o valor dado pela literatura \cite{millikan} de $e = \qty{1,602e-19}{\coulomb}$, o valor calculado tem um desvio percentual de aproximadamente $3\%$, que é um resultado satisfatório.
+
+
+\begin{figure}
 \centering
 \caption{Carga vs n}
 \includegraphics[width=.9\linewidth]{imagens/q_vs_napprox.eps}
+\label{fig: carga_vs_n}
 \end{figure}
 
