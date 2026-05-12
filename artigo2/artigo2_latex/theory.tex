@@ -36,14 +36,15 @@ seu movimento é retilíneo e uniforme. i.e., $\sum_i \mathbf F_i = 0$.
 Tomando o sentido para cima como sendo positivo, temos que quando a gotícula se move para cima, 
 a condição de equilíbrio pode ser exprimida por 
 \begin{gather}
-\sum F = -F_1 +F_2 -F_3 +F_4 = 0 \notag \\
+-F_1 +F_2 -F_3 +F_4 = 0 \notag \\
 \implies - {\frac{4}{3} \pi r^3 \sigma g} + {\frac{4}{3} \pi r^3 \rho g} - {6 \pi r \eta v_s} + {qV/d} = 0 \notag \\
 \implies v_s = \frac{1}{6 \pi r \eta} \left[ qV/d + \frac{4\pi}{3} r^3 g (\rho - \sigma) \right] \;,
 \label{eq: v_subida}
 \end{gather}
-\noindent onde $v_s$ é a velocidade de subida da gotícula. Analogamente, se $v_d$ é a velocidade de descida, temos
+\noindent onde $v_s$ é a velocidade de subida da gotícula. 
+Analogamente, se $v_d$ é a velocidade de descida, temos
 \begin{gather}
-\sum F = -F_1 +F_2 + F_3 - F_4 = 0 \notag \\
+-F_1 +F_2 + F_3 - F_4 = 0 \notag \\
 \implies - {\frac{4}{3} \pi r^3 \sigma g} + {\frac{4}{3} \pi r^3 \rho g} + {6 \pi r \eta v_d} -{qV/d}   \notag \\
 \implies v_d = \frac{1}{6 \pi r \eta} \left[ qV/d - \frac{4\pi}{3} r^3 g (\rho - \sigma) \right] = 0\;.
 \label{eq: v_descida}
@@ -59,12 +60,12 @@ v_s - v_d &= \frac{2}{6 \pi r \eta} \frac{4 \pi r^3 g}{3} (\rho - \sigma) \notag
 \end{align}
 onde
 \begin{equation}
-A \equiv \frac{3}{2} \left[ \frac{\eta}{g(\sigma - \rho)} \right]^{1/2} \;.
+A \equiv \frac{3}{2} \left[ \frac{\eta}{g|\sigma - \rho|} \right]^{1/2} \;.
 \end{equation}
 
 Somando as eqs. \eqref{eq: v_subida} e \eqref{eq: v_descida}, obtemos
 \begin{align}
-v_s + v_d = 2\frac{qV}{6 \pi r \eta d} = \frac{qV}{3 \pi r \eta d} \notag \\
+v_s + v_d = 2\left( \frac{qV}{6 \pi r \eta d} \right) = \frac{qV}{3 \pi r \eta d} \notag \\
 \implies q = 3\pi r \eta d (v_s + v_d)/V \;.
 \label{eq: q}
 \end{align}
